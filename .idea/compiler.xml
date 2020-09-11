@@ -21,10 +21,8 @@
         <module name="Java Auto Grader - Week 5" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="Java Auto Grader - Week 5" target="11" />
-      <module name="Java Auto Grader - Wk 2 3 4 go fishetc" target="1.8" />
-      <module name="Java Auto Grader - Wk 2 etc" target="1.8" />
+    <bytecodeTargetLevel target="14">
+      <module name="Java Auto Grader - Week 5" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>
