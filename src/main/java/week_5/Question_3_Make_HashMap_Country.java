@@ -80,7 +80,7 @@ public class Question_3_Make_HashMap_Country {
         // The second element in codes is "AX" and the second element in names is "Aland Islands"
         // Add the key-value pair "AX"="Aland Islands" to your HashMap.
         
-        // Repeat for the rest of the codes and names. .
+        // Repeat for the rest of the codes and names.
         
         return null;  // TODO delete and replace with your code
     }

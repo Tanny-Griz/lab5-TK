@@ -37,7 +37,7 @@ import static input.InputUtils.*;
  *  One of the tests will always fail. Part of your grade will be from human review of your code,
  *  the data structure you choose, and how you implement the required methods.
  *
- *  PLEASE NOTE the tests don't know what data structure you will use. Several tests check
+ *  NOTE the tests don't know what data structure you will use. Several tests check
  *  your code by calling your addSalesForDay method to add example data, and then call your other
  *  method in sequence and checking that the expected data is returned.
  *  *So, all the tests will fail until you create your data structure, and finish the addSalesForDay method.*
