@@ -48,7 +48,8 @@ public class Question_4_Camping_Reservations {
     private static Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "availability", "RESERVED");
     private static Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "availability", "AVAILABLE");
     
-    /* Map of all the site reservation data. Do not modify this. Use this Map in your getMatchingSites method.*/
+    /* Map of all the site reservation data. Do not modify this. Use this Map in your getMatchingSites method.
+    * Notice that the site names are String values. */
     static Map<String, Map<String, String>> siteInfo = Map.of("1", site1, "2", site2, "3", site3, "4", site4, "5", site5, "6", site6, "7", site7, "8", site8, "9", site9, "10", site10);
     
     
@@ -89,6 +90,8 @@ public class Question_4_Camping_Reservations {
         //
         // For example, if the user wants a TENT campsite and does want water, then campsite "3" matches,
         // but it is reserved. Return an empty list []
+        //
+        // Notice that the site names are String data, not int values.
         
         return null;  // TODO replace with your code.
     }
