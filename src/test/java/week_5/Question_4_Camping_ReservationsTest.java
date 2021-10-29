@@ -29,7 +29,7 @@ public class Question_4_Camping_ReservationsTest {
         Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
         Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
 
-         Map<String, Map<String, String>> siteInfo = Map.of("1", site1, "2", site2, "3", site3, "4", site4, "5", site5, "6", site6, "7", site7, "8", site8, "9", site9, "10", site10);
+         Map<String, Map<String, String>> siteInfo = Map.of("one", site1, "two", site2, "three", site3, "four", site4, "five", site5, "six", site6, "seven", site7, "eight", site8, "nine", site9, "ten", site10);
 
          Question_4_Camping_Reservations.siteInfo = siteInfo;
     }
@@ -45,7 +45,7 @@ public class Question_4_Camping_ReservationsTest {
     @Test(timeout = TIMEOUT)
     public void testSearchTentNoWater() {
         List<String> results = Question_4_Camping_Reservations.getMatchingSites("TENT", false);
-        List<String> expected = List.of("4", "5");
+        List<String> expected = List.of("four", "five");
         assertTrue(ArrayListUtils.stringListSameElementsAnyOrder(results, expected, true));
     
     }
@@ -53,7 +53,7 @@ public class Question_4_Camping_ReservationsTest {
     @Test(timeout = TIMEOUT)
     public void testSearchRVWater() {
         List<String> results = Question_4_Camping_Reservations.getMatchingSites("RV", true);
-        List<String> expected = List.of("2", "8", "10");
+        List<String> expected = List.of("two", "eight", "ten");
         assertTrue(ArrayListUtils.stringListSameElementsAnyOrder(results, expected, true));
     
     }
@@ -61,7 +61,7 @@ public class Question_4_Camping_ReservationsTest {
     @Test(timeout = TIMEOUT)
     public void testSearchRVNoWater() {
         List<String> results = Question_4_Camping_Reservations.getMatchingSites("RV", false);
-        List<String> expected = List.of("7");
+        List<String> expected = List.of("seven");
         assertTrue(ArrayListUtils.stringListSameElementsAnyOrder(results, expected, true));
     }
     
