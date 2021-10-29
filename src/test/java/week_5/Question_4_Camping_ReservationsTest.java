@@ -1,9 +1,11 @@
 package week_5;
 
+import org.junit.Before;
 import org.junit.Test;
 import test_utils.ArrayListUtils;
 
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -13,7 +15,25 @@ import static org.junit.Assert.*;
 public class Question_4_Camping_ReservationsTest {
     
     static final int TIMEOUT = 3000;
-    
+
+    @Before
+    public void useOriginalMaps() {
+        Map<String, String> site1 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "RESERVED", "all_year", "AVAILABLE");
+        Map<String, String> site2 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "AVAILABLE");
+        Map<String, String> site3 = Map.of("type", "TENT", "has_water", "YES", "not_allowed", "RV", "availability", "RESERVED", "all_year", "AVAILABLE");
+        Map<String, String> site4 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "AVAILABLE", "all_year", "AVAILABLE");
+        Map<String, String> site5 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "AVAILABLE", "all_year", "AVAILABLE");
+        Map<String, String> site6 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
+        Map<String, String> site7 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+        Map<String, String> site8 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+        Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
+        Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+
+         Map<String, Map<String, String>> siteInfo = Map.of("1", site1, "2", site2, "3", site3, "4", site4, "5", site5, "6", site6, "7", site7, "8", site8, "9", site9, "10", site10);
+
+         Question_4_Camping_Reservations.siteInfo = siteInfo;
+    }
+
     @Test(timeout = TIMEOUT)
     public void testSearchTentWater() {
         List<String> results = Question_4_Camping_Reservations.getMatchingSites("TENT", true);

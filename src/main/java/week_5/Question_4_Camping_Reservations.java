@@ -36,17 +36,24 @@ import static input.InputUtils.*;
 public class Question_4_Camping_Reservations {
     
     
-    /*  Example individual campsite data. Do not modify this */
-    private static Map<String, String> site1 = Map.of("type", "RV", "has_water", "YES", "availability", "RESERVED");
-    private static Map<String, String> site2 = Map.of("type", "RV", "has_water", "YES", "availability", "AVAILABLE");
-    private static Map<String, String> site3 = Map.of("type", "TENT", "has_water", "YES", "availability", "RESERVED");
-    private static Map<String, String> site4 = Map.of("type", "TENT", "has_water", "NO", "availability", "AVAILABLE");
-    private static Map<String, String> site5 = Map.of("type", "TENT", "has_water", "NO", "availability", "AVAILABLE");
-    private static Map<String, String> site6 = Map.of("type", "TENT", "has_water", "NO", "availability", "RESERVED");
-    private static Map<String, String> site7 = Map.of("type", "RV", "has_water", "NO", "availability", "AVAILABLE");
-    private static Map<String, String> site8 = Map.of("type", "RV", "has_water", "YES", "availability", "AVAILABLE");
-    private static Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "availability", "RESERVED");
-    private static Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "availability", "AVAILABLE");
+    /*  Example individual campsite data. Do not modify this.
+    There are other key-values in these maps that you won't need and can ignore for this program.
+     The keys are:
+     "type" the intended purpose of this type of site, for recreational vehicles (RV) or tents (TENT).
+     "has_water" whether a water connection/faucet is provided at the site or not.
+     "not_allowed" A tent is usually permitted at an RV site, and RVs can use tent sites, unless specified here. For example, site 4 only allows tents, no RVs.
+     "all_year" Some sites are only open during the summer (SUMMER_ONLY), others are open all year (AVAILABLE).
+     */
+    private static Map<String, String> site1 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "RESERVED", "all_year", "AVAILABLE");
+    private static Map<String, String> site2 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "AVAILABLE");
+    private static Map<String, String> site3 = Map.of("type", "TENT", "has_water", "YES", "not_allowed", "RV", "availability", "RESERVED", "all_year", "AVAILABLE");
+    private static Map<String, String> site4 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "AVAILABLE", "all_year", "AVAILABLE");
+    private static Map<String, String> site5 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "AVAILABLE", "all_year", "AVAILABLE");
+    private static Map<String, String> site6 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
+    private static Map<String, String> site7 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+    private static Map<String, String> site8 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+    private static Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
+    private static Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
     
     /* Map of all the site reservation data. Do not modify this. Use this Map in your getMatchingSites method.
     * Notice that the site names are String values. */
@@ -92,8 +99,10 @@ public class Question_4_Camping_Reservations {
         // but it is reserved. Return an empty list []
         //
         // Notice that the site names are String data, not int values.
-        
+
+
         return null;  // TODO replace with your code.
+
     }
     
 }
