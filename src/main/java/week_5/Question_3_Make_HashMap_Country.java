@@ -61,35 +61,50 @@ public class Question_3_Make_HashMap_Country {
         String code;
         
         do {
-            code = stringInput("Enter a code to search for the country, press Enter to quit.");
-            System.out.println(searchCountry(code, countriesAndCodes));
+            code = stringInput("Enter a code to search for the country. Press Enter to quit: ");
+            String countryName = searchCountry(code, countriesAndCodes);
+            System.out.println(countryName);
         } while (code.length() > 0);
         
     }
     
     public static Map<String, String> createCountryCodesMap(String[] codes, String[] names) {
         
-        // TODO Use the countryCodes and countryNames arrays to create a HashMap
+        // TODO Use the codes and names array parameters to create a HashMap.
+        //   codes contains country codes.
+        //   names contains country names.
         // TODO each country code will be a key
         // TODO the corresponding country name will be the value for the country code key
-        // The arrays are in order - so that the first element of codes should map to the first element of names
 
-        // So the first element in codes is "AF" and the first element in names is "Afghanistan"
-        // Add the key-value pair "AF"="Afghanistan" to your HashMap.
+        // The arrays are in order - so that the first element of the codes array relates
+        // to the first element of the names array.
+
+        // So, the first element in codes is "AF" and the first element in names is "Afghanistan".
+        // Your code will add the key-value pair "AF"="Afghanistan" to your HashMap.
     
-        // The second element in codes is "AX" and the second element in names is "Aland Islands"
-        // Add the key-value pair "AX"="Aland Islands" to your HashMap.
+        // The second element in codes is "AX" and the second element in names is "Aland Islands".
+        // Your code will add the key-value pair "AX"="Aland Islands" to your HashMap.
         
         // Repeat for the rest of the codes and names.
+
+        // TODO DON'T WRITE 100s of statements to add individual codes and names!
+        //  One way to solve this problem is with a loop.
         
-        return null;  // TODO delete and replace with your code
+        return null;  // TODO delete and replace with your solution
     }
-    
+
+
     public static String searchCountry(String code, Map<String, String> countryCodes) {
-        // TODO Return "Code not found" if the country code is NOT in the HashMap. Use this exact string.
-        // TODO Return the country name value for the country code key; given by the code parameter
-        
-         return null;   // TODO delete and replace with your code
+
+        // Search the countryCodes map for the country's code.
+        // As always, use the method's parameters.
+
+        // TODO Return the country name value for the code key, given by the code parameter
+
+        // TODO Return the exact string "Code not found" if the country code is NOT in the Map.
+        //  You should use this exact string.
+
+         return null;   // TODO delete and replace with your solution
     }
     
     
