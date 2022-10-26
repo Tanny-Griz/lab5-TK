@@ -60,12 +60,15 @@ public class Question_3_Make_HashMap_Country {
     
         String code;
         
-        do {
+        while (true) {
             code = stringInput("Enter a code to search for the country. Press Enter to quit: ");
+            if ((code.length() == 0)) {  // if the user presses enter, the code will be an empty string
+                break;  // if nothing is entered, end the loop
+            }
             String countryName = searchCountry(code, countriesAndCodes);
             System.out.println(countryName);
-        } while (code.length() > 0);
-        
+        }
+
     }
     
     public static Map<String, String> createCountryCodesMap(String[] codes, String[] names) {
