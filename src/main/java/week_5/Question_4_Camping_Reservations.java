@@ -1,5 +1,6 @@
 package week_5;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -37,12 +38,18 @@ public class Question_4_Camping_Reservations {
     
     
     /*  Example individual campsite data. Do not modify this.
-    There are other key-values in these maps that you won't need and can ignore for this program.
+
      The keys are:
+
      "type" the intended purpose of this type of site, for recreational vehicles (RV) or tents (TENT).
-     "has_water" whether a water connection/faucet is provided at the site or not.
+     "has_water" whether a water connection/faucet is provided at the site or not, "YES" or "NO".
      "not_allowed" A tent is usually permitted at an RV site, and RVs can use tent sites, unless specified here. For example, site 4 only allows tents, no RVs.
      "all_year" Some sites are only open during the summer (SUMMER_ONLY), others are open all year (AVAILABLE).
+     "availability" whether the site is currently available, or is reserved
+
+     You will need to work with the type, has_water and availability data.
+     You will not need to use, and can ignore, the not_allowed and all_year data for this program.
+
      */
     private static Map<String, String> site1 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "RESERVED", "all_year", "AVAILABLE");
     private static Map<String, String> site2 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "AVAILABLE");
@@ -53,10 +60,11 @@ public class Question_4_Camping_Reservations {
     private static Map<String, String> site7 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
     private static Map<String, String> site8 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
     private static Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
-    private static Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+    private static Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "TENT", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
     
-    /* Map of all the site reservation data. Do not modify this. Use this Map in your getMatchingSites method.
-    * Notice that the site names are String values. */
+    // Map of all the site reservation data. Do not modify this.
+    // Use this Map in your getMatchingSites method.
+    // Notice that the site names are String values, not integers.
     static Map<String, Map<String, String>> siteInfo = Map.of("1", site1, "2", site2, "3", site3, "4", site4, "5", site5, "6", site6, "7", site7, "8", site8, "9", site9, "10", site10);
     
     
@@ -85,7 +93,7 @@ public class Question_4_Camping_Reservations {
     }
     
     static List<String> getMatchingSites(String siteType, boolean needWater) {
-        
+
         //TODO search the siteInfo Map (the global variable) and return a List of
         // sites that match the search criteria AND are available.
         //
