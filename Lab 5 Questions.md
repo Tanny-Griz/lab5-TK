@@ -59,8 +59,8 @@ Each campsite has a type ("RV" or "TENT")
 Campsites may or may not have water at the site, stored under a "has_water" key with a value of "YES" or "NO"  
 Campsites can be reserved, stored in a reserved key with a value of "RESERVED" or "AVAILABLE"  
 
-Finish the getMatchingSites method.  
-Search the siteInfo Map (the global variable) and return a List of campsites that match 
+Finish the `getMatchingSites` method.  
+Search the `siteInfo` Map (the global variable) and return a List of campsites that match 
 the search criteria AND are available.
   
   - For example, if the user wants an RV campsite and wants water, then campsite 1 and 2 and 8 and 10 match,
@@ -72,44 +72,7 @@ the search criteria AND are available.
   - For example, if the user wants a TENT campsite and does want water, then site 3 matches,
   but it is reserved. Return an empty list []
 
-
-### Question 5 T-Shirt Sales Records
-
-A t-shirt vendor works at week-long events.  Each event runs for 5 days, from Monday to Friday.
-
-The vendor needs to store data about every event. For each event, they need to save the
-
- - Name of the event
- - Number of t-shirts sold on Monday at that event
- - Number of t-shirts sold on Tuesday at that event
- - Number of t-shirts sold on Wednesday at that event
- - Number of t-shirts sold on Thursday at that event
- - Number of t-shirts sold on Friday at that event
-
-The vendor never works on Saturday or Sunday.
-
-You may not know all of the data about an event when it
-is created in the data store, but you will know the name and at least one day of sales.
-
-Complete this program to gather, and analyse data, about t-shirt sales.
-You'll need to decide what data structure to use to store the data.  
-*Hint*: your data structure may need to contain other data structures. 
-
-Your data structure should support these tasks:
- - Add a new event and sales for a day
- - Add another day sales for an existing event
- - Return an array of 5 days of sales for one event
- - Check if an event exists in the data structure
- - Calculate if a day of sales is above average for the week of sales
-
-Use the exact strings "Monday", "Tuesday", "Wednesday", "Thursday" and "Friday"
-to add and search for data in your data structure.  
-Optional: you can add helper methods to validate and make user input easier.
-
 Notes: 
-- One of the tests will always fail. Part of your grade will be from human review of your code,
-the data structure you choose, and how you implement the required methods.
-- The tests don't know what data structure you will use so it's harder to check if your code is working. The 
-way several tests work is by calling your addSalesForDay method to add example data, and then call your other 
-method in sequence and checking that the expected data is returned.
-- **So, almost all of the tests will fail until you create your data structure, and finish the addSalesForDay method.**  
+
+- There are other key-value pairs in the Map that you don't need to use, and can ignore, for this program.
+- Don't modify the `siteMap` Map

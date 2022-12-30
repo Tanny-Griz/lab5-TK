@@ -24,7 +24,7 @@ public class Question_3_Make_HashMap_CountryTest {
         Map<String, String> actual = Question_3_Make_HashMap_Country.createCountryCodesMap(exampleKeys, exampleValues);
         assertNotNull("Finish the createCountryCodesMap method", actual);
         
-        assertEquals("Hashmap should have the same number of key-value pairs, as the length of the array", expected.size(), actual.size());
+        assertEquals("HashMap should have the same number of key-value pairs, as the length of the array", expected.size(), actual.size());
         
         for (Map.Entry<String, String> entry: expected.entrySet()) {
             assertTrue("Add all of the Strings in the codes array as keys to the Hashmap", actual.containsKey(entry.getKey()) );
