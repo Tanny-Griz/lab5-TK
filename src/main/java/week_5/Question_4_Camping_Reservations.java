@@ -51,15 +51,15 @@ public class Question_4_Camping_Reservations {
      You will not need to use, and can ignore, the not_allowed and all_year data for this program.
 
      */
-    private static Map<String, String> site1 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "RESERVED", "all_year", "AVAILABLE");
-    private static Map<String, String> site2 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "AVAILABLE");
+    private static Map<String, String> site1 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "TENT", "availability", "RESERVED", "all_year", "AVAILABLE");
+    private static Map<String, String> site2 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "TENT", "availability", "AVAILABLE", "all_year", "AVAILABLE");
     private static Map<String, String> site3 = Map.of("type", "TENT", "has_water", "YES", "not_allowed", "RV", "availability", "RESERVED", "all_year", "AVAILABLE");
     private static Map<String, String> site4 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "AVAILABLE", "all_year", "AVAILABLE");
     private static Map<String, String> site5 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "AVAILABLE", "all_year", "AVAILABLE");
-    private static Map<String, String> site6 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
-    private static Map<String, String> site7 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
-    private static Map<String, String> site8 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
-    private static Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
+    private static Map<String, String> site6 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
+    private static Map<String, String> site7 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "TENT", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+    private static Map<String, String> site8 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "TENT", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+    private static Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "TENT", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
     private static Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "TENT", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
     
     // Map of all the site reservation data. Do not modify this.
