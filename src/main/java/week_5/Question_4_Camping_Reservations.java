@@ -1,5 +1,6 @@
 package week_5;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -106,7 +107,6 @@ public class Question_4_Camping_Reservations {
         // but it is reserved. Return an empty list []
         //
         // Notice that the site names are String data, not int values.
-
 
         return null;  // TODO replace with your code.
 

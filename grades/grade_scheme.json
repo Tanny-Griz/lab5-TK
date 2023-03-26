@@ -22,7 +22,9 @@
     {
       "question" : 4,
       "java_file": "Question_4_Camping_Reservations",
-      "test_files": ["week_5.Question_4_Camping_ReservationsTest"],
+      "test_files": [
+        "week_5.Question_4_Camping_Reservations_1_Test",
+        "week_5.Question_4_Camping_Reservations_2_Different_HashMap_Test"],
       "points": 8
     }
   ]

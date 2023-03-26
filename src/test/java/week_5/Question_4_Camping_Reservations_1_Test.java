@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 /**
  * Created by clara on 2019-09-10.
  */
-public class Question_4_Camping_ReservationsTest {
+public class Question_4_Camping_Reservations_1_Test {
     
     static final int TIMEOUT = 3000;
 
