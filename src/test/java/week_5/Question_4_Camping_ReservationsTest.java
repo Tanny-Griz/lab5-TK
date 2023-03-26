@@ -18,16 +18,16 @@ public class Question_4_Camping_ReservationsTest {
 
     @Before
     public void useOriginalMaps() {
-        Map<String, String> site1 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "RESERVED", "all_year", "AVAILABLE");
-        Map<String, String> site2 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "AVAILABLE");
+        Map<String, String> site1 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "TENT", "availability", "RESERVED", "all_year", "AVAILABLE");
+        Map<String, String> site2 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "TENT", "availability", "AVAILABLE", "all_year", "AVAILABLE");
         Map<String, String> site3 = Map.of("type", "TENT", "has_water", "YES", "not_allowed", "RV", "availability", "RESERVED", "all_year", "AVAILABLE");
         Map<String, String> site4 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "AVAILABLE", "all_year", "AVAILABLE");
         Map<String, String> site5 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "AVAILABLE", "all_year", "AVAILABLE");
-        Map<String, String> site6 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
-        Map<String, String> site7 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
-        Map<String, String> site8 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
-        Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
-        Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+        Map<String, String> site6 = Map.of("type", "TENT", "has_water", "NO", "not_allowed", "RV", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
+        Map<String, String> site7 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "TENT", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+        Map<String, String> site8 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "TENT", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
+        Map<String, String> site9 = Map.of("type", "RV", "has_water", "NO", "not_allowed", "TENT", "availability", "RESERVED", "all_year", "SUMMER_ONLY");
+        Map<String, String> site10 = Map.of("type", "RV", "has_water", "YES", "not_allowed", "TENT", "availability", "AVAILABLE", "all_year", "SUMMER_ONLY");
 
          Map<String, Map<String, String>> siteInfo = Map.of("one", site1, "two", site2, "three", site3, "four", site4, "five", site5, "six", site6, "seven", site7, "eight", site8, "nine", site9, "ten", site10);
 
