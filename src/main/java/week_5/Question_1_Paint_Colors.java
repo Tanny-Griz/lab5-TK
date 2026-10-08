@@ -22,6 +22,7 @@ public class Question_1_Paint_Colors {
         paintColors.put("Bedroom 2", "Green");
         
         // TODO add another key-value pair to your map. "Bedroom 3" will be painted "Yellow".
+        // 123
     
         // Should print "Kitchen color: Light Blue"
         System.out.println("Kitchen color: " + getKitchenColor(paintColors));
