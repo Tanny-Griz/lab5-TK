@@ -1,5 +1,6 @@
 package week_5;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static input.InputUtils.stringInput;
@@ -61,7 +62,7 @@ public class Question_3_Make_HashMap_Country {
         String code;
         
         while (true) {
-            code = stringInput("Enter a code to search for the country. Press Enter to quit: ");
+            code = stringInput("Enter a code to search for the country. Press Enter to quit: ").toUpperCase();
             if ((code.length() == 0)) {  // if the user presses enter, the code will be an empty string
                 break;  // if nothing is entered, end the loop
             }
@@ -92,8 +93,16 @@ public class Question_3_Make_HashMap_Country {
 
         // TODO DON'T WRITE 100s of statements to add individual codes and names!
         //  One way to solve this problem is with a loop.
-        
-        return null;  // TODO delete and replace with your solution
+
+        // Create a HashMap for country codes and names
+        Map<String, String> countries = new HashMap<>();
+
+        // Add each code with the country name at the same index
+        for (int i = 0; i < codes.length; i++) {
+            countries.put(codes[i], names[i]);
+        }
+
+        return countries;
     }
 
 
@@ -107,9 +116,10 @@ public class Question_3_Make_HashMap_Country {
         // TODO Return the exact string "Code not found" if the country code is NOT in the Map.
         //  You should use this exact string.
 
-         return null;   // TODO delete and replace with your solution
+        // Return the country name if the code exists, otherwise return "Code not found"
+        return countryCodes.containsKey(code) ? countryCodes.get(code) : "Code not found";
+
     }
-    
-    
+
 }
 

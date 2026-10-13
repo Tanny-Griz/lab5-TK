@@ -1,5 +1,6 @@
 package week_5;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -54,6 +55,8 @@ public class Question_2_Lake_Quality {
         // TODO add the new lake (key) and clarity (value) to lakeClarities HashMap.
         // If the lake name is already in the HashMap, then overwrite the previous clarity value with the new clarity.
         // you don't need to return anything. (Make sure you know why?)
+
+        lakeClarities.put(lake, clarity);
         
     }
     
@@ -64,8 +67,21 @@ public class Question_2_Lake_Quality {
         // and minClarity = 4.0
         // Return a list of ["Como", "Harriet", "Bde Maka Ska"]
         // The order of lakes in this list is not important.
-        
-        return null;   // TODO delete and replace with your code.
+
+        // Create a list for lakes that meet the minimum clarity
+        List<String> swimmingLakes = new ArrayList<>();
+
+        // Check the clarity for each lake
+        for (String lake : lakeClarities.keySet()) {
+
+            double clarity = lakeClarities.get(lake);
+
+            if (clarity >= minClarity) {
+                swimmingLakes.add(lake);
+            }
+        }
+
+        return swimmingLakes;
         
     }
 

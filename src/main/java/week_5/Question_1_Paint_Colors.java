@@ -22,7 +22,7 @@ public class Question_1_Paint_Colors {
         paintColors.put("Bedroom 2", "Green");
         
         // TODO add another key-value pair to your map. "Bedroom 3" will be painted "Yellow".
-        // 123
+        paintColors.put("Bedroom 3", "Yellow");
     
         // Should print "Kitchen color: Light Blue"
         System.out.println("Kitchen color: " + getKitchenColor(paintColors));
@@ -35,15 +35,26 @@ public class Question_1_Paint_Colors {
     
     public static String getKitchenColor(Map<String, String> paintColors) {
         // TODO return the value for the key "Kitchen" in the paintColors HashMap
-        
-        return null;    // TODO delete and replace with your code
+
+        return paintColors.get("Kitchen");
     }
     
     public static int howManyYellowRooms(Map<String, String> paintColors) {
     
         // TODO count how many values are the String "Yellow" in the paintColors HashMap, and return this number.
-        
-        return -1;    // TODO delete and replace with your code
+        int yellowRooms = 0;
+
+        // Loop through all paint colors in the HashMap
+        for (String color : paintColors.values()) {
+
+            // Count every room whose color is Yellow
+            if (color.equals("Yellow")) {
+                yellowRooms++;
+            }
+        }
+
+        return yellowRooms;
+
     }
     
     

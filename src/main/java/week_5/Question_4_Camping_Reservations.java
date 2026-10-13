@@ -108,7 +108,32 @@ public class Question_4_Camping_Reservations {
         //
         // Notice that the site names are String data, not int values.
 
-        return null;  // TODO replace with your code.
+        // Store the names of campsites that match the search
+        List<String> matchingSites = new ArrayList<>();
+
+        // Set the water preference to YES or NO
+        String waterNeeded = needWater ? "YES" : "NO";
+
+        // Check each campsite in siteInfo
+        for (String siteName : siteInfo.keySet()) {
+
+            // Get the information for this campsite
+            Map<String, String> site = siteInfo.get(siteName);
+
+            String type = site.get("type");
+            String hasWater = site.get("has_water");
+            String availability = site.get("availability");
+
+            // Add the campsite only if all conditions match
+            if (type.equals(siteType)
+                    && hasWater.equals(waterNeeded)
+                    && availability.equals("AVAILABLE")) {
+
+                matchingSites.add(siteName);
+            }
+        }
+
+        return matchingSites;
 
     }
     
